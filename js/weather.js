@@ -20,6 +20,7 @@ function showPosition(position) {
     $('.glyphicon-arrow-up').css('transform','rotate(' + result.wind.deg + 'deg)');
     $('.glyphicon-arrow-up').html(" "+ result.wind.deg+ "&deg");
       document.getElementById("weatherIcon").src= "http://openweathermap.org/img/w/"+result.weather[0].icon+".png";
+    $('.row').css('visibility','visible');
     });
 }
 
