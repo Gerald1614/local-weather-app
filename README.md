@@ -1,0 +1,1 @@
+demo app with call to external API. it is slow because I am calling two APis. When living in a big towm, the weather APi returned the name of the borrough and I wanted the app to show the metropolitan name. (for exemple, "Montreal" instead of "Ville Mont Royal")
