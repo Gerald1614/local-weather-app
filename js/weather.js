@@ -22,7 +22,7 @@ function showPosition(position) {
 
       document.getElementById("weatherIcon").src= "https://openweathermap.org/img/w/"+result.weather[0].icon+".png";
     $('.container').css('visibility','visible');
-        $('.loader').css('visibility','hidden');
+        $('.loader').css('display','none');
     });
 }
 
