@@ -17,10 +17,12 @@ function showPosition(position) {
      document.getElementById("weatherResult").innerHTML =result.weather[0].description;
      document.getElementById("tempResult").innerHTML= temperature.toPrecision(3) + " "+tempUnit;
     document.getElementById("windResult").innerHTML= "wind " + result.wind.speed+" knots ";
+    $('#windDir').html(" "+ result.wind.deg+ "&deg");
     $('.glyphicon-arrow-up').css('transform','rotate(' + result.wind.deg + 'deg)');
-    $('.glyphicon-arrow-up').html(" "+ result.wind.deg+ "&deg");
+
       document.getElementById("weatherIcon").src= "http://openweathermap.org/img/w/"+result.weather[0].icon+".png";
-    $('.row').css('visibility','visible');
+    $('.container').css('visibility','visible');
+        $('.loader').css('visibility','hidden');
     });
 }
 
