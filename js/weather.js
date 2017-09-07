@@ -10,7 +10,7 @@ function showPosition(position) {
     lat = position.coords.latitude;
     ln = position.coords.longitude;
     console.log(lat+ln);
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+ln+"&APPID=780791feddc51fd9b16e05c3cd855c5a", function(result){
+    $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+ln+"&APPID=780791feddc51fd9b16e05c3cd855c5a", function(result){
    console.log(result);
   temperature =result.main.temp -273.15,
    getAddress(lat, ln);
@@ -20,7 +20,7 @@ function showPosition(position) {
     $('#windDir').html(" "+ result.wind.deg+ "&deg");
     $('.glyphicon-arrow-up').css('transform','rotate(' + result.wind.deg + 'deg)');
 
-      document.getElementById("weatherIcon").src= "http://openweathermap.org/img/w/"+result.weather[0].icon+".png";
+      document.getElementById("weatherIcon").src= "https://openweathermap.org/img/w/"+result.weather[0].icon+".png";
     $('.container').css('visibility','visible');
         $('.loader').css('visibility','hidden');
     });
@@ -32,7 +32,7 @@ function getAddress (latitude, longitude) {
         var request = new XMLHttpRequest();
 
         var method = 'GET';
-        var url = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true';
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&sensor=true';
         var async = true;
 
         request.open(method, url, async);
